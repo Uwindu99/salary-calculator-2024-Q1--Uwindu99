@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addDeduction, removeDeduction } from "../store/slices/deductionsSlice";
+<<<<<<< HEAD
 import { EarningTextField, AllowanceInput } from "./common/TextField";
 import { AllowanceField, AllowanceLeft, AllowanceRight } from "./common/AllowanceField";
 import IconWrapper from "./common/IconWrapper";
@@ -14,6 +15,25 @@ const DeductionArea = styled.div`
   padding: 0px;
   border-top: 1px solid #e0e0e0;
 `;
+=======
+import { IoMdClose } from "react-icons/io";
+
+import {
+  EarningTextField,
+  AllowanceField,
+  AllowanceLeft,
+  AllowanceTitleInput,
+  AllowanceSalaryInput,
+  AllowanceRight,
+  IconWrapper,
+  BodyLarge,
+  BodyLargeSemibold,
+  BodySmall,
+  AddButton,
+  PlusIcon,
+  DeductionArea
+} from "../styles/components";
+>>>>>>> c8acf18405246cb270e3b923faa4ba8391cdf422
 
 const DeductionsInput = () => {
   const dispatch = useDispatch();
@@ -33,10 +53,14 @@ const DeductionsInput = () => {
     setDeductionValue(0);
   };
 
+<<<<<<< HEAD
   const handleRemoveDeduction = (id) => {
     dispatch(removeDeduction(id));
   };
 
+=======
+  
+>>>>>>> c8acf18405246cb270e3b923faa4ba8391cdf422
   return (
     <DeductionArea>
       <EarningTextField>
@@ -61,7 +85,11 @@ const DeductionsInput = () => {
             />
           </AllowanceLeft>
           <AllowanceRight>
+<<<<<<< HEAD
             <IconWrapper onClick={() => handleRemoveDeduction(deduction.id)}>
+=======
+            <IconWrapper onClick={() => dispatch(removeDeduction(deduction.id))}>
+>>>>>>> c8acf18405246cb270e3b923faa4ba8391cdf422
               <IoMdClose />
             </IconWrapper>
           </AllowanceRight>

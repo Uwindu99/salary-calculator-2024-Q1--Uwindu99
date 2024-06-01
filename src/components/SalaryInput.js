@@ -1,9 +1,17 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setBasicSalary } from "../store/slices/salarySlice";
+<<<<<<< HEAD
 import { AllowanceInput } from "./common/TextField"; // Check this import statement
 import { BodyLargeSemibold } from "./common/Typography"; // Check this import statement
 import styled from "styled-components";
+=======
+import {
+  BasicSalaryFields,
+  BodyLargeSemibold,
+  SalaryInputField
+} from "../styles/components";
+>>>>>>> c8acf18405246cb270e3b923faa4ba8391cdf422
 
 const BasicSalaryFields = styled.div`
   display: flex;

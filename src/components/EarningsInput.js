@@ -8,6 +8,27 @@ import CheckboxInput from "./common/CheckboxInput";
 import { BodyLargeSemibold, BodySmall, BodyLarge } from "./common/Typography";
 import { AddButton, PlusIcon } from "./common/AddButton";
 import { IoMdClose } from "react-icons/io";
+<<<<<<< HEAD
+=======
+import { FaPlus } from "react-icons/fa6";
+import {
+  EarningTextField,
+  AllowanceField,
+  AllowanceLeft,
+  AllowanceTitleInput,
+  AllowanceSalaryInput,
+  AllowanceRight,
+  IconWrapper,
+  SideContainer,
+  CheckboxInput,
+  BodyLarge,
+  BodyLargeSemibold,
+  BodySmall,
+  AddButton,
+  PlusIcon
+} from "../styles/components";
+
+>>>>>>> c8acf18405246cb270e3b923faa4ba8391cdf422
 
 const EarningsInput = () => {
   const dispatch = useDispatch();

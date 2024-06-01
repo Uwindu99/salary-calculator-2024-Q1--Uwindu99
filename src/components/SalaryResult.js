@@ -28,6 +28,10 @@ const SalaryResult = () => {
   const totalDeductions = deductions.reduce((acc, deduction) => acc + deduction.value, 0);
   const netSalary = totalEarnings - totalDeductions;
 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> c8acf18405246cb270e3b923faa4ba8391cdf422
   const epfEmployee = (totalEarnings * 0.08).toFixed(2);
   const epfEmployer = (totalEarnings * 0.12).toFixed(2);
   const etfEmployer = (totalEarnings * 0.03).toFixed(2);
