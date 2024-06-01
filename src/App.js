@@ -8,21 +8,33 @@ import SalaryResult from "./components/SalaryResult";
 import styled from "styled-components";
 
 const MainBlock = styled.div`
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   height: 900px;
   padding: 142px 128px;
-  opacity: 0px;
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 16px;
+    height: auto;
+  }
 `;
 
 const LeftBlock = styled.div`
-  width: 680px;
-  height: auto;
+  width: 100%;
+  max-width: 680px;
+  height: 616px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  opacity: 0px;
   padding: 24px;
-
   background-color: #fafafa;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Heading4 = styled.h4`
@@ -30,13 +42,25 @@ const Heading4 = styled.h4`
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
-  letter-spacing: -0.02199999988079071px;
   text-align: left;
   margin: 0px;
-  width: 209px;
+  width: 300px;
 `;
 
-const RightBox = styled.div``;
+const RightBox = styled.div`
+  width: 100%;
+  max-width: 480px;
+  height: 614px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+`;
 
 const App = () => {
   return (
@@ -44,14 +68,14 @@ const App = () => {
       <MainBlock>
         <LeftBlock>
           <Heading4>Calculate Your Salary</Heading4>
-
           <SalaryInput />
           <EarningsInput />
           <DeductionsInput />
         </LeftBlock>
-        <div className="right-panel">
+        <RightBox>
+          <Heading4>Your Salary</Heading4>
           <SalaryResult />
-        </div>
+        </RightBox>
       </MainBlock>
     </Provider>
   );
