@@ -10,7 +10,7 @@ const SalaryResult = () => {
   const totalDeductions = deductions.reduce((acc, deduction) => acc + deduction.value, 0);
   const netSalary = totalEarnings - totalDeductions;
 
-  // Placeholder calculations for EPF, ETF, and APIT
+  
   const epfEmployee = (totalEarnings * 0.08).toFixed(2);
   const epfEmployer = (totalEarnings * 0.12).toFixed(2);
   const etfEmployer = (totalEarnings * 0.03).toFixed(2);
